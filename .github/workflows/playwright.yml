@@ -10,7 +10,8 @@ on:
 jobs:
   e2e:
     name: Playwright · Chromium
-    runs-on: ubuntu-latest
+    # Versión fija del sistema (no "ubuntu-latest"): así la suite no cambia de entorno sin avisar.
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v7
